@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="GoMusic.MyControls.MySwitch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="50" d:DesignWidth="200">
+	<UserControl.Resources>
+		<Storyboard x:Name="MoveSwitchOn" Completed="MoveSwitchOn_Completed">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-40">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TextblockOn">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TextblockOff" d:IsOptimized="True"/>
+		</Storyboard>
+		<Storyboard x:Name="MoveSwitchOff" >
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="grid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-40">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TextblockOff">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TextblockOn" d:IsOptimized="True"/>
+		</Storyboard>
+	</UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Height="50" Width="90" Tap="LayoutRoot_Tap">
+        <Rectangle Height="35" Width="70" Fill="{StaticResource PhoneAccentBrush}"/>
+        <TextBlock x:Name="TextblockOn" Text="On" FontSize="23" VerticalAlignment="Center" 
+                   Opacity="0" Margin="30,0,0,0" />
+        <!--<Rectangle x:Name="rectangle" Height="25" Width="60" Fill="{StaticResource PhoneAccentBrush}" Visibility="Collapsed"/>-->
+
+        <Grid x:Name="grid" Margin="0,8,0,0" Canvas.Left="0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Polygon x:Name="PolygonCover" Points="0,0 0,35 50,35 65,0" Fill="White"/>
+            <Polygon x:Name="PolygonCover2" Points="40,0 40,35 50,35 65,0" Fill="White"/>
+        </Grid>
+
+        <TextBlock x:Name="TextblockOff" Text="Off" FontSize="23" Foreground="{StaticResource PhoneAccentBrush}" 
+                   VerticalAlignment="Center" Margin="10,0,0,0"/>
+    </Grid>
+</UserControl>

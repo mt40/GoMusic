@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{314FAC6D-BF26-4108-B573-059F22C9B32F}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoMusic</RootNamespace>
+    <AssemblyName>GoMusic</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>GoMusic_Release_2.0.1.0_Free.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>GoMusic.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>12.0.50429.0</ExpressionBlendVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Converters\StreamToImageHDConverter.cs" />
+    <Compile Include="MyControls\MusicAlbum.xaml.cs">
+      <DependentUpon>MusicAlbum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\MainPageDark_List.xaml.cs">
+      <DependentUpon>MainPageDark_List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\NowPlayingPageDark_Square.xaml.cs">
+      <DependentUpon>NowPlayingPageDark_Square.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\ThemeSelectionPageDark.xaml.cs">
+      <DependentUpon>ThemeSelectionPageDark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\AlbumPlaylistPage.xaml.cs">
+      <DependentUpon>AlbumPlaylistPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\AlbumPlaylistPageDark.xaml.cs">
+      <DependentUpon>AlbumPlaylistPageDark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Effect\TiltEffect.cs" />
+    <Compile Include="Controls\PathControl.cs" />
+    <Compile Include="Controls\SplitPanel.cs" />
+    <Compile Include="Converters\StreamToImageConverter.cs" />
+    <Compile Include="Converters\StringToBrushConverter.cs" />
+    <Compile Include="Converters\TimeSpanToTextConverter.cs" />
+    <Compile Include="Framework\Extensions.cs" />
+    <Compile Include="Views\LightTheme\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\MainPageDark.xaml.cs">
+      <DependentUpon>MainPageDark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\MainPage_List.xaml.cs">
+      <DependentUpon>MainPage_List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SearchQuery.cs" />
+    <Compile Include="MyControls\ProgressRing.cs" />
+    <Compile Include="MyControls\SafeImage.cs" />
+    <Compile Include="MyControls\SplashScreenControl.xaml.cs">
+      <DependentUpon>SplashScreenControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\NowPlayingPageDark.xaml.cs">
+      <DependentUpon>NowPlayingPageDark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\NowPlayingPage_Square.xaml.cs">
+      <DependentUpon>NowPlayingPage_Square.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DarkTheme\SearchPageDark.xaml.cs">
+      <DependentUpon>SearchPageDark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ThemeService.cs" />
+    <Compile Include="Services\XNAFrameworkDispatcherService.cs" />
+    <Compile Include="Views\DarkTheme\SettingPageDark.xaml.cs">
+      <DependentUpon>SettingPageDark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StringSimilarityAlgorithms\DiceCoefficient.cs" />
+    <Compile Include="StringSimilarityAlgorithms\FuzzySearch.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="Views\LightTheme\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\MainPageGestureHandler.cs" />
+    <Compile Include="Views\LightTheme\LyricsHelper.cs" />
+    <Compile Include="Views\LightTheme\MainPageMediaPlayerHandler.cs" />
+    <Compile Include="Views\LightTheme\MainPageSideMenuHandler.cs" />
+    <Compile Include="Views\LightTheme\MainPageTrayHandler.cs" />
+    <Compile Include="Models\AlbumModel.cs" />
+    <Compile Include="Models\ArtistModel.cs" />
+    <Compile Include="Models\FakeSong.cs" />
+    <Compile Include="Models\PlaylistModel.cs" />
+    <Compile Include="MyControls\MySwitch.xaml.cs">
+      <DependentUpon>MySwitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\NowPlayingPage.xaml.cs">
+      <DependentUpon>NowPlayingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\NowPlayingPageTrayHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\GeneralService.cs" />
+    <Compile Include="Services\MediaService.cs" />
+    <Compile Include="Services\PlaylistService.cs" />
+    <Compile Include="Views\LightTheme\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightTheme\ThemeSelectionPage.xaml.cs">
+      <DependentUpon>ThemeSelectionPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MyControls\MusicAlbum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\MainPageDark_List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\NowPlayingPageDark_Square.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\ThemeSelectionPageDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\AlbumPlaylistPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\AlbumPlaylistPageDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\InfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\MainPageDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\MainPage_List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyControls\MySwitch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyControls\SplashScreenControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\NowPlayingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\NowPlayingPageDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\NowPlayingPage_Square.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\SearchPageDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LightTheme\SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DarkTheme\SettingPageDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LightTheme\ThemeSelectionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HockeyAppContent\Thumbs.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appicon5.png" />
+    <Content Include="appicon5_300.png" />
+    <Content Include="Assets\appicon2.png" />
+    <Content Include="Assets\appicon3_small.png" />
+    <Content Include="Assets\appicon4_300.png" />
+    <Content Include="Assets\appicon5.png" />
+    <Content Include="Assets\appicon5_100.png" />
+    <Content Include="Assets\appicon5_300.png" />
+    <Content Include="Assets\appicon_red.png" />
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\app_icon3.png" />
+    <Content Include="Assets\Icons\arrow_down.png" />
+    <Content Include="Assets\Icons\arrow_down2.png" />
+    <Content Include="Assets\Icons\arrow_up.png" />
+    <Content Include="Assets\Icons\arrow_up2.png" />
+    <Content Include="Assets\Icons\pause_icon.png" />
+    <Content Include="Assets\Icons\playlist4.png" />
+    <Content Include="Assets\Icons\play_icon.png" />
+    <Content Include="Assets\Icons\repeat.png" />
+    <Content Include="Assets\Icons\repeat2.png" />
+    <Content Include="Assets\Icons\repeat_dark.png" />
+    <Content Include="Assets\Icons\shuffle.png" />
+    <Content Include="Assets\Icons\shuffle2.png" />
+    <Content Include="Assets\Icons\shuffle_dark.png" />
+    <Content Include="Assets\Icons\user.png" />
+    <Content Include="Assets\Icons\volume.png" />
+    <Content Include="Assets\Images\cover_dark.png" />
+    <Content Include="Assets\Images\cover_slate.png" />
+    <Content Include="Assets\Images\theme_Dark.png" />
+    <Content Include="Assets\Images\theme_DarkSquare.png" />
+    <Content Include="Assets\Images\theme_Light.png" />
+    <Content Include="Assets\Images\theme_LightSquare.png" />
+    <Content Include="Assets\Images\tile_bg2.png" />
+    <Content Include="Assets\Images\cover2.png" />
+    <Content Include="Assets\Icons\cross2.png" />
+    <Content Include="Assets\Icons\album.png" />
+    <Content Include="Assets\Icons\album2.png" />
+    <Content Include="Assets\Icons\artist.png" />
+    <Content Include="Assets\Icons\artist2.png" />
+    <Content Include="Assets\Icons\artist3.png" />
+    <Content Include="Assets\Icons\cross.png" />
+    <Content Include="Assets\Icons\headphone.png" />
+    <Content Include="Assets\Icons\music_note.png" />
+    <Content Include="Assets\Icons\music_note1.png" />
+    <Content Include="Assets\Icons\playlist.png" />
+    <Content Include="Assets\Icons\artist1.png" />
+    <Content Include="Assets\Icons\playlist2.png" />
+    <Content Include="Assets\Icons\playlist3.png" />
+    <Content Include="Assets\Icons\sad.png" />
+    <Content Include="Assets\Icons\setting.png" />
+    <Content Include="Assets\Images\bg.png" />
+    <Content Include="Assets\Images\cover.png" />
+    <Content Include="Assets\Images\disk.png" />
+    <Content Include="Assets\Images\tile_background.png" />
+    <Content Include="Assets\Images\txture.png" />
+    <Content Include="Assets\Test\test4.png" />
+    <Content Include="Assets\Test\test5.png" />
+    <Content Include="Assets\Test\test2.png" />
+    <Content Include="Assets\Test\test3.png" />
+    <Content Include="Assets\Test\test1.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\wideTile2.png" />
+    <Content Include="HockeyAppContent\Attach.png" />
+    <Content Include="HockeyAppContent\Cancel.png" />
+    <Content Include="HockeyAppContent\Photo.png" />
+    <Content Include="HockeyAppContent\Reply.png" />
+    <Content Include="HockeyAppContent\Send.png" />
+    <Content Include="icon.png" />
+    <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="store_bg.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <Content Include="Assets\wideTile.png" />
+    <Content Include="Assets\wideTile_bg.png" />
+    <Content Include="wideTile.png" />
+    <Content Include="wideTile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AdDuplex.WindowsPhone">
+      <HintPath>..\packages\AdDuplexWP8.2.8.0.8\lib\wp8\AdDuplex.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Audio">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Audio.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Controls">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAds">
+      <HintPath>..\..\..\..\..\..\..\Google Admob\GoogleAds.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeyApp">
+      <HintPath>..\packages\HockeySDK.WP.2.1.0-beta3\lib\wp8\HockeyApp.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeyAppPCL">
+      <HintPath>..\packages\HockeySDK.Core.2.1.0-beta3\lib\portable-net45+win8+wp8\HockeyAppPCL.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls" />
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XPath\System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.BackgroundAgentTools, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.BackgroundAgentTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Behaviors, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ImageEditor, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Primitives, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Controls.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2013.2.612.3040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Telerik\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhone">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.12.0\lib\WindowsPhone8\WriteableBitmapExWinPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhoneXnaDependant">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.12.0\lib\WindowsPhone8\WriteableBitmapExWinPhoneXnaDependant.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

@@ -1,0 +1,9 @@
+# ignore assets folder like icons, screenshot
+GoMusic Assets/
+GoMusic Screenshots/
+
+# ignore bin folder
+Bin/
+
+# ignore C++ *.sdf file
+*.sdf

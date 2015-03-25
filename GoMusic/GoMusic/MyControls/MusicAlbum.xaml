@@ -1,0 +1,312 @@
+﻿<UserControl x:Class="GoMusic.MyControls.MusicAlbum"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:System="clr-namespace:System;assembly=mscorlib" 
+    mc:Ignorable="d"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="NextItem" Completed="NextItem_Completed" FillBehavior="HoldEnd">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+                                           Storyboard.TargetName="grid0"  x:Name="ani1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-20"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid0" 
+                                           x:Name="ani2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="grid0" 
+                                           x:Name="ani3">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>2</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>2</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>0</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" 
+                                           Storyboard.TargetName="grid0"  x:Name="ani4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" 
+                                           Storyboard.TargetName="grid0"  x:Name="ani5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+                                           Storyboard.TargetName="grid1" x:Name="ani6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="20"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="grid1"
+                                           x:Name="ani7">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>1</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>1</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>1</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>2</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" 
+                                           Storyboard.TargetName="grid1" x:Name="ani8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.85"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.85"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.85"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" 
+                                           Storyboard.TargetName="grid1" x:Name="ani9">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.85"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.85"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.85"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+                                           Storyboard.TargetName="grid2" x:Name="ani10">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" 
+                                           Storyboard.TargetName="grid2" x:Name="ani11">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.85"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" 
+                                           Storyboard.TargetName="grid2" x:Name="ani12">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.85"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="grid2"
+                                           x:Name="ani13">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>0</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>0</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>0</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <System:Int32>1</System:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="PreviousItem" Completed="PreviousItem_Completed" FillBehavior="HoldEnd">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+        		Storyboard.TargetName="grid0" >
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-20"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="70"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="70"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="20"/>
+        	</DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid0" >
+                <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="grid0" >
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>0</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>2</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>2</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" 
+        		Storyboard.TargetName="grid0"  >
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0.8"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.9"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" 
+        		Storyboard.TargetName="grid0"  >
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0.8"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.9"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+        		Storyboard.TargetName="grid1" >
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="20"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="grid1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>2</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>1</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>1</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>1</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" 
+        		Storyboard.TargetName="grid1" >
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.85"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.85"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.85"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" 
+        		Storyboard.TargetName="grid1" >
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.9"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0.85"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.85"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.85"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+        		Storyboard.TargetName="grid2" >
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="-20"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="-20"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" 
+        		Storyboard.TargetName="grid2" >
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.85"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.8"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" 
+        		Storyboard.TargetName="grid2" >
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.85"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.8"/>
+        	</DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="grid2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>1</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>0</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>0</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+        			<DiscreteObjectKeyFrame.Value>
+        				<System:Int32>0</System:Int32>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <UserControl.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
+    </UserControl.FontFamily>
+    <UserControl.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal"/>
+    </UserControl.FontSize>
+    <UserControl.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush"/>
+    </UserControl.Foreground>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid x:Name="grid2" Margin="0" Background="#FF21212C" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform ScaleX="0.8" ScaleY="0.8" TranslateY="-20"/>
+            </Grid.RenderTransform>
+            <Rectangle Stroke="Black" StrokeThickness="1" Opacity="0.3" Canvas.ZIndex="1"/>
+            <Image Stretch="UniformToFill"/>
+        </Grid>
+        <Grid x:Name="grid1" Background="#FF21212C" Canvas.ZIndex="1" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
+            </Grid.RenderTransform>
+            <Rectangle Stroke="Black" StrokeThickness="1" Opacity="0.3" Canvas.ZIndex="1"/>
+            <Image Stretch="UniformToFill"/>
+        </Grid>
+        <Grid x:Name="grid0"  Background="#FF21212C" RenderTransformOrigin="0.5,0.5" Canvas.ZIndex="2">
+            <Grid.RenderTransform>
+                <CompositeTransform ScaleY="0.9" ScaleX="0.9" TranslateY="20"/>
+            </Grid.RenderTransform>
+            <Rectangle Stroke="Black" StrokeThickness="1" Opacity="0.3" Canvas.ZIndex="1"/>
+            <Image Stretch="UniformToFill"/>
+        </Grid>
+    </Grid>
+</UserControl>

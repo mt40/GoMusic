@@ -1,0 +1,34 @@
+﻿<Application
+    x:Class="GoMusic.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:myConverter="clr-namespace:GoMusic.Converters"
+    xmlns:s="clr-namespace:GoMusic.Services;assembly=GoMusic">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <local:LocalizedStrings xmlns:local="clr-namespace:GoMusic" x:Key="LocalizedStrings"/>
+        <myConverter:StreamToImageConverter x:Key="StreamToImageConverter"/>
+        <myConverter:StreamToImageHDConverter x:Key="StreamToImageHDConverter"/>
+        <myConverter:TimeSpanToTextConverter x:Key="TimeSpanToTextConverter"/>
+        <myConverter:StringToBrushConverter x:Key="StringToBrushConverter"/>
+        <SolidColorBrush x:Key="TextLightBrush" Color="White"/>
+        <SolidColorBrush x:Key="TextDarkBrush" Color="Black"/>
+        <SolidColorBrush x:Key="ListItemBackgroundDarkBrush" Color="#FF28282E"/>
+        <SolidColorBrush x:Key="ListItemDividerDarkBrush" Color="Gray"/>
+        <SolidColorBrush x:Key="GroupHeaderDarkBrush" Color="#FF1E1E23"/>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+        <s:XNAFrameworkDispatcherService/>
+    </Application.ApplicationLifetimeObjects>
+   
+    
+
+</Application>
